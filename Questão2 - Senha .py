@@ -43,9 +43,9 @@ def validador_senha(senha: str):
         print(f'{cores[2]}Você precisa digitar ao menos 1 caractere especial.{cores[0]}')
 
     if maiusculas and minusculas and digito and especiais:
-        return False
-    else:
         return True
+    else:
+        return False
 
 
 cores = (
@@ -60,7 +60,7 @@ menu()
 
 while True:
     senha = input('Digite uma senha: ')
-    if not validador_senha(senha):
+    if validador_senha(senha):
         print(f'\n{cores[4]}A senha cadastrada foi:{cores[0]} {senha}')
         break
     print()
